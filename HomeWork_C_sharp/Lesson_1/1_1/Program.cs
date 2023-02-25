@@ -1,19 +1,17 @@
 ﻿int firstNum = int.Parse(Console.ReadLine()!);
 int secondNum = int.Parse(Console.ReadLine()!);
 int thirdNum = int.Parse(Console.ReadLine()!);
-if(firstNum > secondNum && firstNum > secondNum)
+int max = 0;
+if(firstNum > secondNum)
 {
-    Console.Write($"firstNum");
-    
+    max = firstNum;
 }
 else
 {
-    if(secondNum > firstNum && secondNum > thirdNum)
-    {
-        Console.Write($"secondNum");
-    }
-else
+    max = secondNum;
+}
+if(max < thirdNum)
 {
-    Console.Write($"thirdNum");
+    max = thirdNum;
 }
-}
+Console.Write($"{max}");
