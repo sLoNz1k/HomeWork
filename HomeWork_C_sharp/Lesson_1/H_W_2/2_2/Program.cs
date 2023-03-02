@@ -5,20 +5,28 @@
     int result = Convert.ToInt32(value);
     return result;
 }
-bool checkout(int num)
+int GetNum(int number)
 {
-    if(num >= 100 && num <= 999)
+    while(number > 999)
+    {
+        number /= 10;
+    }
+    return number % 10;
+}
+bool check(int num)
+{
+    if(num >= 100)
     {
         return true;
     }
     else
     {
-        Console.WriteLine("Вы ввели неверное число!");
+        Console.Write("Третьей цифры нет!");
         return false;
     }
 }
 int num = Prompt("Введите число: ");
-if(checkout(num))
+if (check(num))
 {
-    Console.WriteLine(num /10 % 10);
+    Console.WriteLine(GetNum(num));
 }
