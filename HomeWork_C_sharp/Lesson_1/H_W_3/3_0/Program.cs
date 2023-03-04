@@ -7,7 +7,7 @@ void num(int n)
     int i = 1;
     while(n >= i)
     {
-        Console.WriteLine(Math.Pow(i, 2));
+        Console.WriteLine(Math.Pow(i, 3));
         i++;
     }
 }
