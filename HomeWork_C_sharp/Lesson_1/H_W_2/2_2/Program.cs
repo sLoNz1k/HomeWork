@@ -7,26 +7,9 @@
 }
 int GetNum(int number)
 {
-    while(number > 999)
+    if(number >= 10000 && number <= 99999)
     {
-        number /= 10;
+        int div = number / 10000;
+        int dif = div % 10;
     }
-    return number % 10;
-}
-bool check(int num)
-{
-    if(num >= 100)
-    {
-        return true;
-    }
-    else
-    {
-        Console.Write("Третьей цифры нет!");
-        return false;
-    }
-}
-int num = Prompt("Введите число: ");
-if (check(num))
-{
-    Console.WriteLine(GetNum(num));
 }
