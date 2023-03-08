@@ -22,4 +22,4 @@ void pallindrome(int num)
         }
     }
 }
-pallindrome(int.Parse(Console.ReadLine())!);
+pallindrome(int.Parse(Console.ReadLine()!));

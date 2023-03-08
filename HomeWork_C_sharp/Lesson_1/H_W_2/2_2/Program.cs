@@ -1,7 +1,7 @@
 ﻿int Prompt(string message)
 {
     Console.Write(message);
-    string value = Console.ReadLine();
+    string value = Console.ReadLine()!;
     int result = Convert.ToInt32(value);
     return result;
 }
@@ -11,5 +11,9 @@ int GetNum(int number)
     {
         int div = number / 10000;
         int dif = div % 10;
+    
     }
+    return number;
 }
+int lol = GetNum(123);
+Prompt("123");

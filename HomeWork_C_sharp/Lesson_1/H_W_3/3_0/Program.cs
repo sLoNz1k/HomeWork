@@ -11,4 +11,4 @@ void num(int n)
         i++;
     }
 }
-num(int.Parse(Console.ReadLine())!);
+num(int.Parse(Console.ReadLine()!));
