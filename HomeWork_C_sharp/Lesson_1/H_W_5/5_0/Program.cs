@@ -18,8 +18,6 @@ int[] Array(int massive)
     }
     return arr;
 }
-int[] NewMassive = Array(5);
-PrintMassive(NewMassive);
 
 int ValueOddsNums(int[] array)
 {
@@ -29,7 +27,7 @@ int ValueOddsNums(int[] array)
         if(array[i] % 2 == 0)
             count = count + 1;
     }
-    Console.WriteLine($"Количество нечётных чисел -> {count}");
+    Console.WriteLine($"Количество чётных чисел -> {count}");
     return count;
 }
 int[] mass = Array(8);
