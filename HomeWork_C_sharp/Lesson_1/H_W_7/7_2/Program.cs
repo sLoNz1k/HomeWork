@@ -33,11 +33,11 @@ void Average(int[,] array)
     int RowLenght = array.GetLength(0);
     int ColumnLenght = array.GetLength(1);
 
-    for (int j = 0; j < ColumnLenght; j++)
+    for (int i = 0; i < ColumnLenght; i++)
     {
-        for (int i = 0; i < RowLenght; i++)
+        for (int j = 0; j < RowLenght;j++)
         {
-            Avg += array[i,j];
+            Avg += array[j,i];
         }
         double result = Math.Round(Avg / RowLenght, 2);
         Console.Write($" {result} ");
