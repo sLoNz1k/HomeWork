@@ -41,9 +41,9 @@ void ReverseMaxMin(int[,] array)
         {
             for (int n = 0; n < ColumnLenght; n++) 
             {
-                if(array[i,j] < array[i,n]) continue;
+                if(array[i,j] > array[i,n]) 
                 {
-                    (array[i,j], array[i,n]) = (array[i,n], array[i,j]);
+                    (array[i,n], array[i,j]) = (array[i,j], array[i,n]);
                 }
             }
         }
