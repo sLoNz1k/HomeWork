@@ -75,7 +75,7 @@ int InputNumb(string message)
 
 int[,] CreateArray(int row, int column)
 {
-    return new int[row,column];
+    return new int[row, column];
 }
 
 void FillArray(int[,] array, int from, int to)
@@ -85,7 +85,7 @@ void FillArray(int[,] array, int from, int to)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i,j] = rnd.Next(from, to +1);
+            array[i, j] = rnd.Next(from, to + 1);
         }
     }
 }
@@ -97,8 +97,8 @@ string PrintArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            result += array[i,j];
-            if(j != array.GetLength(1)- 1)
+            result += array[i, j];
+            if (j != array.GetLength(1) - 1)
                 result += "\t";
             else
                 result += "\n";
@@ -114,7 +114,7 @@ int[] MinValue(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            mass[i] += array[i,j];
+            mass[i] += array[i, j];
         }
     }
     return mass;
@@ -122,12 +122,12 @@ int[] MinValue(int[,] array)
 
 int MinRow(int[] array)
 {
-    int min = array[0];
+    int min = 0;
     for (int i = 1; i < array.Length; i++)
     {
-        if(min > array[i] ) min = array[i];
+        if (array[min] > array[i]) min = i;
     }
-    return min;
+    return min + 1;
 }
 
 string Print1DArray(int[] array)
@@ -136,7 +136,7 @@ string Print1DArray(int[] array)
     for (int i = 0; i < array.Length; i++)
     {
         result += array[i];
-        if(i != array.Length - 1) result += ";\n ";
+        if (i != array.Length - 1) result += ";\n ";
         else result += ".";
     }
     return $"Сумма строк двумерного массива: \n {result}";
@@ -155,4 +155,4 @@ int[] SumOfRows = MinValue(massive);
 string Printing = Print1DArray(SumOfRows);
 Console.WriteLine(Printing);
 int Res = MinRow(SumOfRows);
-Console.WriteLine($"Сумма наименьшей строки равна: {Res}");
+Console.WriteLine($"Номер строки с наименьшей суммой равна: {Res}");
