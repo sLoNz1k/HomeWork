@@ -74,7 +74,7 @@ int[,] RemoveRC(int[,] arr, int[] m_indexes)
             }
         }
         m = 0;        
-        if (m_indexes[0] != i) k += 1;        
+        if (m_indexes[0] != i) m += 1;        
     }
     return new_matr;
 }
